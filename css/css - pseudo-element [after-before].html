@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css</title>
+    <style>
+        h1::after {
+            content: url(icon.png);
+        }
+
+        p::before {
+            content: open-quote;
+        }
+
+        p::after {
+            content: close-quote;
+        }
+
+        .text-content::after {
+            content: no-close-quote;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello World</h1>
+    <h1>Hello World</h1>
+    <h1>Hello World</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, ipsum porro quo placeat totam laudantium
+        accusantium architecto molestiae natus ducimus? Placeat, dicta illum similique illo necessitatibus aut vitae
+        harum earum!</p>
+    <p class="text-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, ipsum porro quo placeat
+        totam laudantium
+        accusantium architecto molestiae natus ducimus? Placeat, dicta illum similique illo necessitatibus aut vitae
+        harum earum!</p>
+</body>
+
+</html>
