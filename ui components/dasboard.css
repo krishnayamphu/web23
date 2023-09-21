@@ -1,0 +1,73 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar{
+    height: 100vh;
+    width: 200px;
+    box-shadow: 2px 0 2px #ddd;
+    float: left;
+}
+.sidebar .brand-logo span{
+    padding: 10px 15px 10px 40px;
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+}
+.sidebar .sideNav{
+
+}
+.sideNav ul{
+    list-style: none;
+}
+.sideNav ul li a{
+    text-decoration: none;
+    display: block;
+    color: black;
+    padding: 8px 15px;
+}
+.sideNav .float-right{
+    float: right;
+    font-size: 12px;
+}
+
+.content{
+    width: calc(100% - 200px);
+    float: left;
+}
+.top-nav{
+    overflow: hidden;
+    padding: 5px;
+}
+.top-nav form{
+    float: left;
+}
+.top-nav form input{
+    padding: 5px;
+}
+.top-nav form button{
+    border: none;
+    background-color: transparent;
+}
+.top-nav ul{
+    float: right;
+    list-style: none;
+}
+.top-nav ul li{
+    display: inline-block;
+}
+.top-nav ul li a{
+    display: inline-block;
+    color: black;
+}
+.hero-banner{
+    clear: both;
+    background-image: url(images/curved-a4-paper-mockup-psd.jpg);
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    
+}
