@@ -4,7 +4,9 @@
     margin: 0;
     padding: 0;
 }
-
+p{
+    line-height: 1.5;
+}
 .sidebar{
     height: 100vh;
     width: 200px;
@@ -62,6 +64,27 @@
 .top-nav ul li a{
     display: inline-block;
     color: black;
+    padding: 5px 10px;
+    text-decoration: none;
+    position: relative;
+}
+.top-nav span{
+    background-color: #db1b1b;
+    color:white;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    line-height: 20px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -4px;
+    left: 18px;
+}
+.top-nav img{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
 }
 .hero-banner{
     clear: both;
@@ -70,4 +93,49 @@
     background-size: cover;
     background-position: center;
     
+}
+
+.profile{
+    padding: 15px;
+    position: relative;
+}
+.profile-picture{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 0 5px #ccc;
+    position: absolute;
+    top: -75px;
+}
+.profile-content{
+
+}
+.profile-header{
+    position: relative;
+    left: 150px;
+    width: calc(100% - 150px);
+    padding: 0 15px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.profile-header h3{
+    font-size: 30px;
+    float: left;
+}
+.profile-header .btn-edit{
+    float: right;
+    display: inline-block;
+    text-decoration: none;
+    background-color: #1b85db;
+    color:white;
+    padding: 5px 15px;
+    border-radius: 25px;
+    margin-top: 4px;
+}
+.profile-content p{
+    clear: both;
+    margin-top: 40px;
+    width: 50%;
 }
