@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        .text-green {
+            color: green;
+        }
+
+        .bg-danger {
+            background-color: #f33838;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="toggleClass()">Toggle Class</button>
+    <p class="bg-danger">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum tempore eius accusantium
+        reprehenderit architecto
+        culpa quibusdam dolorum? Tempore animi neque saepe laboriosam, veniam repellat, in exercitationem iure, maiores
+        dolore consequatur.</p>
+
+    <script>
+        document.querySelector("p").classList.add("text-green");
+        document.querySelector("p").classList.remove("bg-danger");
+
+        function toggleClass() {
+            document.querySelector("p").classList.toggle("text-green");
+        }
+    </script>
+
+</body>
+
+</html>

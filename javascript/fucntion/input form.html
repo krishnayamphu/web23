@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .calc {
+            background-color: aliceblue;
+            box-shadow: 0 0 5px #ccc;
+            width: 300px;
+            padding: 15px;
+            margin: 50px auto;
+        }
+
+        .calc input {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 2px 6px;
+        }
+
+        button {
+            width: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calc">
+        <label for="t1" id="lbltext"></label>
+        <input type="text" id="t1" onkeypress="upper()">
+    </div>
+
+    <script>
+        function upper() {
+            let text = document.getElementById("t1").value;
+            document.getElementById("t1").value = text.toUpperCase();
+            document.getElementById("lbltext").innerHTML = text.length;
+        }
+    </script>
+
+</body>
+
+</html>

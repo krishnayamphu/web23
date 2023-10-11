@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <input type="text" id="tbox">
+    <button onclick="getText()">get Text</button>
+    <button onclick="setText()">set Text</button>
+    <script>
+        function getText() {
+            let data = document.getElementById("tbox").value;
+            alert(data);
+        }
+
+        function setText() {
+            let data = document.getElementById("tbox").value = "Hello World";
+
+        }
+    </script>
+
+</body>
+
+</html>

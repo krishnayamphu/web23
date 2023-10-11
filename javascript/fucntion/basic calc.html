@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .calc {
+            background-color: aliceblue;
+            box-shadow: 0 0 5px #ccc;
+            width: 300px;
+            padding: 15px;
+            margin: 50px auto;
+        }
+
+        .calc input {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 2px 6px;
+        }
+
+        button {
+            width: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calc">
+        <input type="text" id="t1">
+        <input type="text" id="t2">
+        <input type="text" id="t3">
+        <button onclick="sum()">+</button>
+        <button onclick="sub()">-</button>
+        <button onclick="mul()">x</button>
+        <button onclick="div()">/</button>
+        <button onclick="clearBox()">c</button>
+    </div>
+
+    <script>
+        function sum() {
+            let n1 = parseFloat(document.getElementById("t1").value);
+            let n2 = parseFloat(document.getElementById("t2").value);
+            document.getElementById("t3").value = n1 + n2;
+        }
+        function sub() {
+            let n1 = parseFloat(document.getElementById("t1").value);
+            let n2 = parseFloat(document.getElementById("t2").value);
+            document.getElementById("t3").value = n1 - n2;
+        }
+        function mul() {
+            let n1 = parseFloat(document.getElementById("t1").value);
+            let n2 = parseFloat(document.getElementById("t2").value);
+            document.getElementById("t3").value = n1 * n2;
+        }
+        function div() {
+            let n1 = parseFloat(document.getElementById("t1").value);
+            let n2 = parseFloat(document.getElementById("t2").value);
+            document.getElementById("t3").value = n1 / n2;
+        }
+        function clearBox() {
+            document.getElementById("t1").value = "";
+            document.getElementById("t2").value = "";
+            document.getElementById("t3").value = "";
+        }
+
+    </script>
+
+</body>
+
+</html>

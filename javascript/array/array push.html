@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        const fruits = ["Banana", "Orange", "Apple"];
+        for (i = 0; i < fruits.length; i++) {
+            document.write(fruits[i] + ", ");
+        }
+
+        //add new item
+        fruits.push("Mango");
+        document.write("<hr>");
+        for (i = 0; i < fruits.length; i++) {
+            document.write(fruits[i] + ", ");
+        }
+
+        //remove last item
+        fruits.pop();
+        document.write("<hr>");
+        for (i = 0; i < fruits.length; i++) {
+            document.write(fruits[i] + ", ");
+        }
+
+        // Removing the first element from array 
+        fruits.shift();
+        document.write("<hr>");
+        for (i = 0; i < fruits.length; i++) {
+            document.write(fruits[i] + ", ");
+        }
+
+    </script>
+
+</body>
+
+</html>
