@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: rgb(8, 5, 49);
+            display: flex;
+            align-items: center;
+        }
+
+        nav .bars {
+            display: inline-block;
+            padding: 5px 15px;
+        }
+
+        nav .bars span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            margin-bottom: 5px;
+            background-color: aliceblue;
+        }
+
+        nav .close {
+            text-decoration: none;
+            display: inline-block;
+            color: aliceblue;
+            padding: 1px 15px;
+            font-size: 24px;
+        }
+
+        nav .bars span:last-child {
+            margin-bottom: 0;
+        }
+
+        #sideNav {
+            background-color: aliceblue;
+            width: 140px;
+            height: calc(100vh - 30px);
+            box-shadow: 2px 0 2px #ccc;
+        }
+
+        #sideNav ul {
+            padding-top: 15px;
+        }
+
+        #sideNav ul li a {
+            display: block;
+            padding: 5px 15px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        #sideNav ul li a:hover {
+            background-color: aquamarine;
+            transition: all 0.5s linear;
+        }
+
+        .d-block {
+            display: block !important;
+        }
+
+        .d-none {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a class="bars" href="#" onclick="openNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+        <a class="close d-none" href="#" onclick="closeNav()">X</a>
+    </nav>
+    <div id="sideNav" class="hide-nav">
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Home</a>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        function openNav() {
+            document.querySelector("div#sideNav").classList.remove("d-none");
+            document.querySelector("a.bars").classList.add("d-none");
+            document.querySelector("a.close").classList.remove("d-none");
+            document.querySelector("a.close").classList.add("d-block");
+        }
+        function closeNav() {
+            document.querySelector("div#sideNav").classList.add("d-none");
+            document.querySelector("a.bars").classList.remove("d-none");
+            document.querySelector("a.bars").classList.add("d-block");
+            document.querySelector("a.close").classList.add("d-none");
+        }
+    </script>
+
+</body>
+
+</html>
