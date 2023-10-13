@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        @font-face {
+            font-family: 'digital';
+            src: url('digital7.ttf');
+        }
+
+        * {
+            font-family: 'digital';
+        }
+
+        .clock {
+            background-color: rgb(8, 73, 30);
+            width: 200px;
+            margin: 15px auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 2px #ccc;
+        }
+
+        input {
+            font-size: 40px;
+            width: 100%;
+            text-align: center;
+            background-color: transparent;
+            border: none;
+            color: white;
+            letter-spacing: 2px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="clock">
+        <input type="text" id="tbox">
+    </div>
+    <script>
+        function clock() {
+            const date = new Date();
+            let h = date.getHours();
+            if (h > 12)
+                h = h - 12;
+            const m = date.getMinutes();
+            const s = date.getSeconds();
+            const ms = date.getMilliseconds();
+            document.getElementById("tbox").value = h + ":" + m + ":" + s;
+        }
+
+        setInterval(clock, 1000);
+    </script>
+
+</body>
+
+</html>
